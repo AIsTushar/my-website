@@ -26,7 +26,7 @@ export default function Home() {
         />
 
         <Link
-          href="/azizul_islam_tushar.pdf"
+          href="https://drive.google.com/file/d/1XV5LDMGzealB0REQ0vyY1520xvPWGh4l/view?usp=drive_link"
           target="_blank"
           download={true}
           className="border-secondary text-secondary mt-8 flex w-fit items-center rounded-md border-2 border-solid px-6 py-4 font-semibold"

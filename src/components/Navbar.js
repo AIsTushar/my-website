@@ -58,7 +58,7 @@ function Navbar() {
   };
 
   return (
-    <header className="fixed flex w-full items-center justify-between px-12 py-8">
+    <header className="fixed top-0 z-50 flex w-full items-center justify-between px-12 py-8">
       {/* Logo */}
       <Logo />
 
