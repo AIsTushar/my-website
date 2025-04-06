@@ -19,8 +19,8 @@ export default function Home() {
         />
 
         <GradualSpacing
-          text=" I’m a software engineer passionate about building clean, efficient,
-          and user-friendly web applications. Currently, I’m focused on creating
+          text=" I'm a software engineer passionate about building clean, efficient,
+          and user-friendly web applications. Currently, I'm focused on creating
           impactful, community-driven platforms and continuously sharpening my
           full stack skills with modern technologies."
         />

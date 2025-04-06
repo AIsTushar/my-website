@@ -12,29 +12,16 @@ const item = {
   tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
 };
 
-function FeaturedProjectCard() {
+function FeaturedProjectCardLeft() {
   return (
     <div className="flex">
-      {/* Image */}
-      <div className="group relative h-96 w-[548px] overflow-hidden rounded-md">
-        <Image
-          src="/projects/project_1.png"
-          alt=""
-          width={500}
-          height={500}
-          className="h-full w-full object-cover"
-        />
-
-        <div className="bg-secondary absolute inset-0 opacity-50 transition-all duration-300 group-hover:opacity-0"></div>
-      </div>
-
       {/* Details */}
-      <div className="z-10 -ml-20 flex flex-col items-end justify-center gap-6 text-right">
+      <div className="z-10 -mr-20 flex flex-col items-start justify-center gap-6 text-left">
         <div>
           <p className="text-secondary">Featured Project</p>
           <p className="text-2xl text-white">Halcyon Theme</p>
         </div>
-        <div className="w-[548px] rounded-sm bg-[#112240] py-6 pr-8 pl-12 text-right text-gray-300">
+        <div className="w-[548px] rounded-sm bg-[#112240] py-6 pr-12 pl-8 text-left text-gray-300">
           A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
           more. Available on Visual Studio Marketplace, Package Control, Atom
           Package Manager, and npm.
@@ -53,8 +40,21 @@ function FeaturedProjectCard() {
           </Link>
         </div>
       </div>
+
+      {/* Image */}
+      <div className="group relative h-96 w-[548px] overflow-hidden rounded-md">
+        <Image
+          src="/projects/project_1.png"
+          alt=""
+          width={500}
+          height={500}
+          className="h-full w-full object-cover"
+        />
+
+        <div className="bg-secondary absolute inset-0 opacity-50 transition-all duration-300 group-hover:opacity-0"></div>
+      </div>
     </div>
   );
 }
 
-export default FeaturedProjectCard;
+export default FeaturedProjectCardLeft;
