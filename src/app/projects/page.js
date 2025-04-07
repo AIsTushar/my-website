@@ -2,31 +2,116 @@ import AnimatedText from "@/components/AnimatedText";
 import GradualSpacing from "@/components/GradualSpacing";
 import FeaturedProjectCard from "@/components/Projects/FeaturedProjectCard";
 import FeaturedProjectCardLeft from "@/components/Projects/FeaturedProjectCardLeft";
+import MoreProjectCard from "@/components/Projects/MoreProjectCard";
+
+const feturedProjects = [
+  {
+    title: "trade-go-limited",
+    description:
+      "A modern, responsive website built with Next.js, Tailwind CSS, and JavaScript for Trade Go Limited. clean wash chemical suppliers, based on UK.",
+    image: "/projects/project_1.png",
+    gitLink: "https://github.com/AIsTushar/trade-go-limited",
+    liveLink: "https://tradegolimited.co.uk/",
+    tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
+  },
+
+  {
+    title: "Hotel Management System",
+    description:
+      "A modern and fully functional hotel management admin dashboard built with React.js and Supabase. Designed for employees to manage operations efficiently.",
+    image: "/projects/project_2.png",
+    gitLink: "https://github.com/AIsTushar/The-Wild-Oasis-admin-panel",
+    liveLink: "https://the-wild-oasis-admin-panel-nu.vercel.app/dashboard",
+    tags: [
+      "JavaScript",
+      "React",
+      "Supabase",
+      "Tailwind CSS",
+      "VS Code",
+      "ReactQuery",
+    ],
+  },
+  {
+    title: "The-Wild-Oasis-Website",
+    description:
+      "A morern and woring Admin Dashboard built with React.js and for backend supabase was used.",
+    image: "/projects/project_3.png",
+    gitLink: "https://github.com/AIsTushar/The-Wild-Oasis-Website",
+    liveLink: "https://the-wild-oasis-website-six-blond.vercel.app/",
+    tags: ["JavaScript", "React", "Supabase", "Tailwind CSS", "VS Code"],
+  },
+];
+
+const moreProjects = [
+  {
+    title: "Recipedia - Recipe blog website",
+    image: "/projects/project_4.png",
+    gitLink: "https://github.com/AIsTushar/Recipedia",
+    liveLink: "https://recipedia-coral.vercel.app",
+    tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
+  },
+  {
+    title: "Forecaster Single Page",
+    image: "/projects/project_5.png",
+    gitLink: "https://github.com/AIsTushar/forecaster-single-page-nextjs",
+    liveLink: "https://forecaster-single-page-nextjs.vercel.app",
+    tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
+  },
+  {
+    title: "React Real Estate Website",
+    image: "/projects/project_6.png",
+    gitLink: "https://github.com/AIsTushar/React-Real-Estate-Website",
+    liveLink: "https://real-estate-website-cfb.pages.dev",
+    tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
+  },
+  {
+    title: "Portfolio - The website you are looking at!",
+    image: "/projects/project_8.png",
+    gitLink: "https://github.com/AIsTushar/my-website",
+    liveLink: "/",
+    tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
+  },
+];
 
 function page() {
   return (
-    <main className="mt-36 flex w-full flex-col items-center">
+    <main className="mt-36 flex w-full flex-col items-center overflow-hidden">
       <div className="flex w-full max-w-4xl flex-col gap-12">
         <AnimatedText
           text="Work. Hobby. Open Source."
           className="!text-6xl !text-gray-200"
         />
 
-        <p className="leading-[120%] text-gray-300">
-          I enjoy building projects, mostly small ones that help me learn and
-          try new ideas. My GitHub&apos;s full of them. Some projects are still
-          completed, others have been discontinued. Below you can find a few of
-          them.
-        </p>
+        <div className="flex flex-col gap-4">
+          <p className="leading-[120%] tracking-wide text-gray-300">
+            I enjoy building projects, mostly small ones that help me learn and
+            try new ideas. My GitHub&apos;s full of them.
+          </p>
+
+          <p className="leading-[120%] tracking-wide text-gray-300">
+            Some projects are still completed, others have been discontinued.
+            Below you can find a few of them.
+          </p>
+        </div>
       </div>
 
       <div className="mt-24 flex flex-col gap-32">
-        <FeaturedProjectCard />
-        <FeaturedProjectCardLeft />
-        <FeaturedProjectCard />
+        {feturedProjects.map((project, index) =>
+          index % 2 === 0 ? (
+            <FeaturedProjectCard key={index} project={project} />
+          ) : (
+            <FeaturedProjectCardLeft key={index} project={project} />
+          ),
+        )}
       </div>
 
-      <div className="mb-96"></div>
+      <div className="my-16 flex w-full flex-col items-center gap-12">
+        <h2 className="text-center text-5xl text-white">More Projects</h2>
+
+        {moreProjects.map((project, i) => (
+          <MoreProjectCard key={i} project={project} />
+        ))}
+      </div>
     </main>
   );
 }
