@@ -23,6 +23,7 @@ function page() {
       <div className="mt-24 flex flex-col gap-32">
         <FeaturedProjectCard />
         <FeaturedProjectCardLeft />
+        <FeaturedProjectCard />
       </div>
 
       <div className="mb-96"></div>

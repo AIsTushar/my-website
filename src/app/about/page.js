@@ -8,33 +8,41 @@ function page() {
     <div className="mt-46 w-full">
       <div className="m-auto flex w-3/5 flex-col gap-12">
         <h1 className="text-5xl leading-[120%] text-white">
-          Senior Product Designer specializing in user-centric innovation and
-          product evolution.
+          Full Stack Developer passionate about crafting meaningful user
+          experiences and building impact-driven digital products.
         </h1>
 
         <p className="text-2xl leading-[120%] text-gray-300">
-          I&apos;m Dejan, a seasoned Senior Product Designer with over 10 years
-          of experience in dynamic startup environments. Throughout my career,
-          I&apos;ve led end-to-end design projects, specializing in optimizing
-          user experiences and driving product evolution. I thrive in
-          problem-solving, prioritizing user-centric needs, and delivering
-          high-quality designs that elevate user satisfaction.
+          Hey, I&apos;m Azizul Islam Tushar — a dedicated Full Stack Developer
+          with a background in Computer Science and a strong passion for
+          building intuitive, user-focused applications. With hands-on
+          experience in technologies like React.js, Next.js, Node.js,
+          PostgreSQL, and MongoDB, I specialize in developing full-stack
+          solutions that not only function smoothly but also resonate with real
+          user needs.
         </p>
 
         <p className="text-2xl leading-[120%] text-gray-300">
-          In previous roles, I&apos;ve spearheaded strategic initiatives that
-          significantly enhanced product metrics and user engagement. I excel in
-          guiding comprehensive design projects, from strategic planning and
-          user research to UI/UX design and seamless collaboration across teams.
-          With a strong foundation in methodical design thinking and usability
-          principles, I leverage diverse design tools and methodologies to
-          achieve impactful outcomes.
+          I thrive at the intersection of code and creativity—whether it&apos;s
+          designing community-driven platforms, working with RESTful APIs,
+          integrating third-party services like or ensuring clean, maintainable
+          code. I&apos;ve built and contributed to projects ranging from
+          e-commerce to social impact platforms, always with a focus on
+          usability, accessibility, and scalability.
+        </p>
+
+        <p className="text-2xl leading-[120%] text-gray-300">
+          Beyond the code, I believe in learning by doing, continuously growing
+          through real-world projects, and collaborating across teams to create
+          solutions that matter. Whether it&apos;s shipping a new feature,
+          debugging an issue, or just brainstorming better UX flows—I&apos;m
+          always all in. Let&apos;s build something meaningful.
         </p>
       </div>
 
       <div className="mt-16 flex w-full justify-center">
         <Image
-          src="/test.png"
+          src="/me.png"
           alt="Dejan"
           width={1000}
           height={1000}
