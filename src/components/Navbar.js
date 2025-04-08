@@ -72,7 +72,7 @@ function Navbar() {
           <CustomLinks title="Home" href="/" className="mr-4" />
           <CustomLinks title="About" href="/about" className="mx-4" />
           <CustomLinks title="Projects" href="/projects" className="mx-4" />
-          <CustomLinks title="Blog" href="/blog" className="ml-4" />
+          <CustomLinks title="Articles" href="/articles" className="ml-4" />
         </nav>
       </motion.div>
 
