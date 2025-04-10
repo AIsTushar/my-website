@@ -33,7 +33,7 @@ function Page() {
     visible: (i) => ({
       opacity: 1,
       scale: 1,
-      x: i * (100 + 2) + "%",
+      x: i * (100 + 4) + "%",
       transition: {
         duration: 0.4,
         ease: "easeInOut",
