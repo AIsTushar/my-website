@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedText from "@/components/AnimatedText";
+import Card from "@/components/articles/Card";
 import FeaturedArcicalCard from "@/components/articles/FeaturedArticleCard";
 import GradualSpacing from "@/components/GradualSpacing";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,6 +21,29 @@ const cards = [
     desc: "Explore closures, event loop, and execution context in detail.",
     img: "/articles/react_question.png",
     readTime: "8 min read",
+  },
+];
+
+const othersArticles = [
+  {
+    id: 1,
+    title: "Entry Level React Interview Questions",
+    date: "February 1, 2023",
+  },
+  {
+    id: 2,
+    title: "Advanced JavaScript Tricks",
+    date: "February 1, 2023",
+  },
+  {
+    id: 3,
+    title: "Entry Level React Interview Questions",
+    date: "February 1, 2023",
+  },
+  {
+    id: 4,
+    title: "Advanced JavaScript Tricks",
+    date: "February 1, 2023",
   },
 ];
 
@@ -102,6 +126,12 @@ function Page() {
       </div>
       <div className="my-16 flex w-full max-w-4xl flex-col gap-6">
         <h2 className="text-5xl text-white">All Articles</h2>
+
+        <div>
+          {othersArticles.map((article) => (
+            <Card key={article.id} data={article} />
+          ))}
+        </div>
       </div>
     </main>
   );

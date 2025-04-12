@@ -7,7 +7,10 @@ function GradualSpacing({ text, className }) {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <p className={`text-lg text-gray-400 ${className}`} ref={ref}>
+    <p
+      className={`text-lg text-gray-400 ${className} max-w-full break-words`}
+      ref={ref}
+    >
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}
