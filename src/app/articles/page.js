@@ -49,6 +49,7 @@ const othersArticles = [
 
 function Page() {
   const [activeCard, setActiveCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const backgroundVariants = {
     hidden: {
@@ -82,7 +83,7 @@ function Page() {
           className="!text-6xl !text-gray-200"
         />
 
-        <div className="bg-red-500">
+        <div className="">
           <GradualSpacing
             text="I write Articles sometimes — not because anyone asked, but mostly so this page doesn't look too empty; a few might even make sense. Probably."
             className="leading-[120%] tracking-wide !text-gray-300"
@@ -102,7 +103,7 @@ function Page() {
                 animate="visible"
                 exit="exit"
                 custom={activeCard}
-                className="absolute inset-0 z-0 rounded-2xl bg-gray-800"
+                className="absolute inset-0 rounded-2xl bg-slate-800"
                 style={{
                   width: "calc(50% - 0.5rem)",
                   height: "100%",
@@ -127,10 +128,38 @@ function Page() {
       <div className="my-16 flex w-full max-w-4xl flex-col gap-6">
         <h2 className="text-5xl text-white">All Articles</h2>
 
-        <div>
-          {othersArticles.map((article) => (
-            <Card key={article.id} data={article} />
-          ))}
+        <div className="relative z-10 flex flex-col">
+          <AnimatePresence>
+            {hoveredCard !== null && (
+              <motion.div
+                key="card-hover-bg"
+                initial={{ opacity: 0, y: -10, scale: 0.4 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  top: hoveredCard * 96,
+                }}
+                exit={{
+                  opacity: 0,
+                  y: -10,
+                  transition: { delay: 0.4 }, // fade out delay on hover out
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="absolute left-0 z-0 h-[96px] w-full rounded-md bg-slate-800"
+              />
+            )}
+          </AnimatePresence>
+          <div className="relative z-10">
+            {othersArticles.map((article, index) => (
+              <Card
+                key={article.id}
+                data={article}
+                index={index}
+                setHoveredCard={setHoveredCard}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </main>
