@@ -2,6 +2,7 @@
 
 import AnimatedText from "@/components/AnimatedText";
 import FeaturedArcicalCard from "@/components/articles/FeaturedArticleCard";
+import GradualSpacing from "@/components/GradualSpacing";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -57,14 +58,11 @@ function Page() {
           className="!text-6xl !text-gray-200"
         />
 
-        <div className="flex flex-col gap-4">
-          <p className="leading-[120%] tracking-wide text-gray-300">
-            I write Articles sometimes—not because anyone asked, but mostly so
-            this page doesn&apos;t look too empty;
-          </p>
-          <p className="leading-[120%] tracking-wide text-gray-300">
-            a few might even make sense. Probably.
-          </p>
+        <div className="bg-red-500">
+          <GradualSpacing
+            text="I write Articles sometimes — not because anyone asked, but mostly so this page doesn't look too empty; a few might even make sense. Probably."
+            className="leading-[120%] tracking-wide !text-gray-300"
+          />
         </div>
       </div>
 
@@ -102,7 +100,6 @@ function Page() {
           </div>
         </div>
       </div>
-
       <div className="my-16 flex w-full max-w-4xl flex-col gap-6">
         <h2 className="text-5xl text-white">All Articles</h2>
       </div>

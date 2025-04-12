@@ -45,7 +45,7 @@ function SocialLinks() {
       <MotionLink
         whileHover={{ y: -5, color: "#64ffda" }}
         target="_blank"
-        href="/azizul_islam_tushar.pdf"
+        href="https://leetcode.com/u/azizultushar98/"
       >
         <Code2 className="h-5 w-5" />
       </MotionLink>

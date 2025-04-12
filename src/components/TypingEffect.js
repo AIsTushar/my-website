@@ -2,11 +2,11 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-function TypingEffect({ text }) {
+function TypingEffect({ text, className }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <p ref={ref} className="text-secondary ml-1 text-lg">
+    <p ref={ref} className={`text-secondary ml-1 text-lg ${className}`}>
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}

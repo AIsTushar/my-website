@@ -1,13 +1,13 @@
 "use client";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-function GradualSpacing({ text }) {
+function GradualSpacing({ text, className }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <p className="w-2/3 text-lg text-gray-400" ref={ref}>
+    <p className={`text-lg text-gray-400 ${className}`} ref={ref}>
       {text.split(" ").map((word, index) => (
         <motion.span
           key={index}
