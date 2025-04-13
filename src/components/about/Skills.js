@@ -1,37 +1,40 @@
+"use client";
+
 import { Code, CodeXml, StarIcon } from "lucide-react";
 import Image from "next/image";
-import TechIcon from "./TechIcon";
 import CardHeader from "./CardHeader";
 import ToolboxItemComponent from "./ToolboxItemComponent";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxItems = [
   {
     title: "JavaScript",
-    icon: CodeXml,
+    icon: "/icons/js.png",
   },
   {
     title: "React",
-    icon: CodeXml,
+    icon: "/icons/react.png",
   },
   {
     title: "HTML5",
-    icon: CodeXml,
+    icon: "/icons/html-5.png",
   },
   {
     title: "CSS3",
-    icon: Code,
+    icon: "/icons/css-3.png",
   },
   {
     title: "GitHub",
-    icon: Code,
+    icon: "/icons/github.png",
   },
   {
     title: "Tailwind CSS",
-    icon: Code,
+    icon: "/icons/tailwindcss.png",
   },
   {
     title: "Next.js",
-    icon: Code,
+    icon: "/icons/nextjs.png",
   },
 ];
 
@@ -82,11 +85,12 @@ const hobbies = [
 ];
 
 function Skills() {
+  const ref = useRef(null);
   return (
     <div className="flex flex-col gap-8">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
         {/* Favorite Book Card */}
-        <div className="h-[320px] w-[320px] overflow-hidden rounded-md border border-white/20 bg-gray-800 md:col-span-2">
+        <div className="h-[320px] w-full overflow-hidden rounded-md border border-white/20 bg-gray-800 md:col-span-2">
           <CardHeader
             icon={StarIcon}
             title="My Reads"
@@ -112,11 +116,15 @@ function Skills() {
             description="Explore the tools and technologies I've used in my projects."
           />
 
-          <ToolboxItemComponent items={toolboxItems} className="mt-6" />
           <ToolboxItemComponent
             items={toolboxItems}
             className="mt-6"
-            itemsWrapperClassName="-translate-x-1/2"
+            itemsWrapperClassName="animate-slide-left"
+          />
+          <ToolboxItemComponent
+            items={toolboxItems}
+            className="mt-6"
+            itemsWrapperClassName="animate-slide-right"
           />
         </div>
       </div>
@@ -130,25 +138,31 @@ function Skills() {
             description="Explore my interests and hobbies"
           />
 
-          <div className="relative flex-grow">
+          <div className="relative flex-grow" ref={ref}>
             {hobbies.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
+                className="absolute inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
                 style={{ left: item.left, top: item.top }}
+                drag
+                dragConstraints={ref}
+                dragElastic={0.2}
               >
                 <span className="font-medium text-gray-950">{item.title}</span>
                 <span>{item.icon}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Map of city */}
-        <div className="relative col-span-2 h-[320px] w-[320px] overflow-hidden rounded-md border border-white/20 bg-gray-800 px-6 py-8">
+        <div className="relative col-span-2 h-[320px] w-full overflow-hidden rounded-md border border-white/20 bg-gray-800 px-6 py-8">
           <Image src="/map.png" alt="map" fill className="object-cover" />
 
-          <div className="from-secondary absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-b to-emerald-300 after:absolute after:inset-0 after:rounded-full after:outline-2 after:-outline-offset-2 after:outline-gray-900/30 after:content-['']">
+          <div className="absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full after:absolute after:inset-0 after:rounded-full after:outline-2 after:-outline-offset-2 after:outline-gray-900/30 after:content-['']">
+            <div className="from-secondary absolute inset-0 -z-10 animate-ping rounded-full bg-gradient-to-b to-emerald-300 opacity-75 [animation-duration:2s]"></div>
+            <div className="from-secondary absolute inset-0 -z-10 rounded-full bg-gradient-to-b to-emerald-300"></div>
+
             <Image
               src="/memoji-smile.png"
               alt="memoji"
