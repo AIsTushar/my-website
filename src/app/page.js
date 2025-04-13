@@ -1,11 +1,9 @@
-import AnimatedText from "@/components/AnimatedText";
-import EmailLink from "@/components/EmailLink";
-import GradualSpacing from "@/components/GradualSpacing";
-import SocialLinks from "@/components/SocialLinks";
-import TypingEffect from "@/components/TypingEffect";
-import { Download } from "lucide-react";
-
-import Link from "next/link";
+import AnimatedText from "@/components/ui/AnimatedText";
+import DownloadCv from "@/components/ui/DownloadCv";
+import EmailLink from "@/components/ui/EmailLink";
+import GradualSpacing from "@/components/ui/GradualSpacing";
+import SocialLinks from "@/components/ui/SocialLinks";
+import TypingEffect from "@/components/ui/TypingEffect";
 
 export default function Home() {
   return (
@@ -25,14 +23,7 @@ export default function Home() {
           full stack skills with modern technologies."
         />
 
-        <Link
-          href="https://drive.google.com/file/d/1XV5LDMGzealB0REQ0vyY1520xvPWGh4l/view?usp=drive_link"
-          target="_blank"
-          download={true}
-          className="border-secondary text-secondary mt-8 flex w-fit items-center rounded-md border-2 border-solid px-6 py-4 font-semibold"
-        >
-          Download My Resume <Download className="ml-1 h-5 w-5" />
-        </Link>
+        <DownloadCv />
       </div>
 
       <SocialLinks />

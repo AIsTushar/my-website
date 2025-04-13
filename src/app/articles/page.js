@@ -1,9 +1,9 @@
 "use client";
 
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "@/components/ui/AnimatedText";
 import Card from "@/components/articles/Card";
 import FeaturedArcicalCard from "@/components/articles/FeaturedArticleCard";
-import GradualSpacing from "@/components/GradualSpacing";
+import GradualSpacing from "@/components/ui/GradualSpacing";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 

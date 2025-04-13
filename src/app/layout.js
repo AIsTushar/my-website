@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import MouseAura from "@/components/MouseAura";
-import Navbar from "@/components/Navbar";
+import MouseAura from "@/components/ui/MouseAura";
+import Navbar from "@/components/ui/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import TechIcon from "./TechIcon";
 
 function ToolboxItemComponent({ items, className, itemsWrapperClassName }) {
@@ -8,14 +9,18 @@ function ToolboxItemComponent({ items, className, itemsWrapperClassName }) {
       <div
         className={`flex flex-none gap-6 py-0.5 pr-6 ${itemsWrapperClassName}`}
       >
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="inline-flex items-center gap-4 rounded-lg px-3 py-2 text-white outline-2 outline-white/10"
-          >
-            <TechIcon component={item.icon} />
-            <span className="font-semibold">{item.title}</span>
-          </div>
+        {[...new Array(2)].map((_, index) => (
+          <Fragment key={index}>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="inline-flex items-center gap-4 rounded-lg px-3 py-2 text-white outline-2 outline-white/10"
+              >
+                <TechIcon component={item.icon} />
+                <span className="font-semibold">{item.title}</span>
+              </div>
+            ))}
+          </Fragment>
         ))}
       </div>
     </div>

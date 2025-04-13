@@ -1,8 +1,7 @@
-import AnimatedText from "@/components/AnimatedText";
-import GradualSpacing from "@/components/GradualSpacing";
-import FeaturedProjectCard from "@/components/Projects/FeaturedProjectCard";
-import FeaturedProjectCardLeft from "@/components/Projects/FeaturedProjectCardLeft";
-import MoreProjectCard from "@/components/Projects/MoreProjectCard";
+import AnimatedText from "@/components/ui/AnimatedText";
+import FeaturedProjectCard from "@/components/projects/FeaturedProjectCard";
+import FeaturedProjectCardLeft from "@/components/projects/FeaturedProjectCardLeft";
+import MoreProjectCard from "@/components/projects/MoreProjectCard";
 
 const feturedProjects = [
   {

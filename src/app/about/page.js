@@ -59,8 +59,8 @@ function page() {
         <h2 className="text-center text-5xl text-white">Education</h2>
         <EducationCard />
       </div>
-      <div className="mt-16 flex w-full flex-col">
-        <h2 className="text-center text-5xl text-white">My Skills</h2>
+      <div className="mx-auto mt-16 flex w-3/5 flex-col">
+        <h2 className="mb-20 text-center text-5xl text-white">My Skills</h2>
         <Skills />
       </div>
     </div>
