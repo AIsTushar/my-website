@@ -1,6 +1,7 @@
 import EducationCard from "@/components/about/EducationCard";
 import ExperienceCard from "@/components/about/ExperienceCard";
 import Skills from "@/components/about/Skills";
+import Footer from "@/components/ui/Footer";
 import Image from "next/image";
 
 function page() {
@@ -63,6 +64,8 @@ function page() {
         <h2 className="mb-20 text-center text-5xl text-white">My Skills</h2>
         <Skills />
       </div>
+
+      <Footer />
     </div>
   );
 }

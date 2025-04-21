@@ -86,7 +86,7 @@ function Page() {
         <div className="">
           <GradualSpacing
             text="I write Articles sometimes — not because anyone asked, but mostly so this page doesn't look too empty; a few might even make sense. Probably."
-            className="leading-[120%] tracking-wide !text-gray-300"
+            className="leading-[160%] tracking-wide !text-gray-300"
           />
         </div>
       </div>

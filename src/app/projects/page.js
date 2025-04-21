@@ -2,6 +2,8 @@ import AnimatedText from "@/components/ui/AnimatedText";
 import FeaturedProjectCard from "@/components/projects/FeaturedProjectCard";
 import FeaturedProjectCardLeft from "@/components/projects/FeaturedProjectCardLeft";
 import MoreProjectCard from "@/components/projects/MoreProjectCard";
+import GradualSpacing from "@/components/ui/GradualSpacing";
+import Footer from "@/components/ui/Footer";
 
 const feturedProjects = [
   {
@@ -43,6 +45,13 @@ const feturedProjects = [
 
 const moreProjects = [
   {
+    title: "Tour management Api",
+    image: "/projects/project_7.png",
+    gitLink: "https://github.com/AIsTushar/Tour-management-Api",
+    liveLink: "#",
+    tags: ["JavaScript", "Node.js", "Express.js", "MongoDB", "VS Code"],
+  },
+  {
     title: "Recipedia - Recipe blog website",
     image: "/projects/project_4.png",
     gitLink: "https://github.com/AIsTushar/Recipedia",
@@ -81,16 +90,11 @@ function page() {
           className="!text-6xl !text-gray-200"
         />
 
-        <div className="flex flex-col gap-4">
-          <p className="leading-[120%] tracking-wide text-gray-300">
-            I enjoy building projects, mostly small ones that help me learn and
-            try new ideas. My GitHub&apos;s full of them.
-          </p>
-
-          <p className="leading-[120%] tracking-wide text-gray-300">
-            Some projects are still completed, others have been discontinued.
-            Below you can find a few of them.
-          </p>
+        <div className="">
+          <GradualSpacing
+            text="I enjoy building projects, mostly small ones that help me learn and try new ideas. My GitHub's full of them. Some projects are still completed, others have been discontinued. Below you can find a few of them."
+            className="leading-[160%] tracking-wide !text-gray-300"
+          />
         </div>
       </div>
 
@@ -104,13 +108,15 @@ function page() {
         )}
       </div>
 
-      <div className="my-16 flex w-full flex-col items-center gap-12">
+      <div className="mt-16 flex w-full flex-col items-center gap-12">
         <h2 className="text-center text-5xl text-white">More Projects</h2>
 
         {moreProjects.map((project, i) => (
           <MoreProjectCard key={i} project={project} />
         ))}
       </div>
+
+      <Footer />
     </main>
   );
 }
