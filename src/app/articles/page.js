@@ -6,6 +6,7 @@ import FeaturedArcicalCard from "@/components/articles/FeaturedArticleCard";
 import GradualSpacing from "@/components/ui/GradualSpacing";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Footer from "@/components/ui/Footer";
 
 const cards = [
   {
@@ -125,7 +126,7 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="my-16 flex w-full max-w-4xl flex-col gap-6">
+      <div className="mt-16 flex w-full max-w-4xl flex-col gap-6">
         <h2 className="text-5xl text-white">All Articles</h2>
 
         <div className="relative z-10 flex flex-col">
@@ -162,6 +163,7 @@ function Page() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

@@ -1,9 +1,9 @@
 import AnimatedText from "@/components/ui/AnimatedText";
+import GradualSpacing from "@/components/ui/GradualSpacing";
+import Footer from "@/components/ui/Footer";
 import FeaturedProjectCard from "@/components/projects/FeaturedProjectCard";
 import FeaturedProjectCardLeft from "@/components/projects/FeaturedProjectCardLeft";
 import MoreProjectCard from "@/components/projects/MoreProjectCard";
-import GradualSpacing from "@/components/ui/GradualSpacing";
-import Footer from "@/components/ui/Footer";
 
 const feturedProjects = [
   {
