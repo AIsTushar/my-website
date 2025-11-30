@@ -12,12 +12,12 @@ function DownloadCv() {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      href="https://drive.google.com/file/d/1XV5LDMGzealB0REQ0vyY1520xvPWGh4l/view?usp=drive_link"
+      href="https://drive.google.com/file/d/1k5SNZiSzfLbkUlf5YVIKilBw0xaZ30e8/view?usp=sharing"
       target="_blank"
       download={true}
-      className="border-secondary text-secondary mt-8 flex w-fit items-center rounded-md border-2 border-solid px-6 py-4 font-semibold"
+      className="border-secondary text-secondary test-sm mt-8 flex w-fit items-center rounded-md border-[.1px] border-solid px-6 py-4 font-semibold"
     >
-      Download My Resume <Download className="ml-1 h-5 w-5" />
+      Download My Resume <Download className="ml-2 h-4 w-4" />
     </MotionLink>
   );
 }

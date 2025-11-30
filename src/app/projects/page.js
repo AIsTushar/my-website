@@ -7,10 +7,20 @@ import MoreProjectCard from "@/components/projects/MoreProjectCard";
 
 const feturedProjects = [
   {
+    title: "DIMCPrep: Online Question Bank",
+    description:
+      "Your trusted online question bank for the Diploma in Immediate Medical Care with 1200+ expert-crafted questions. Built for doctors, paramedics, and nurses preparing for excellence in pre-hospital emergency care.",
+
+    image: "/projects/dmc.png",
+    gitLink: "#",
+    liveLink: "https://dimcprep.com",
+    tags: ["TypeScript", "Node.js", "Express.js", "Stripe", "Next.js"],
+  },
+  {
     title: "trade-go-limited",
     description:
       "A modern, responsive website built with Next.js, Tailwind CSS, and JavaScript for Trade Go Limited. clean wash chemical suppliers, based on UK.",
-    image: "/projects/project_1.png",
+    image: "/projects/trade-go-limited.png",
     gitLink: "https://github.com/AIsTushar/trade-go-limited",
     liveLink: "https://tradegolimited.co.uk/",
     tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
@@ -60,14 +70,14 @@ const moreProjects = [
   },
   {
     title: "Forecaster Single Page",
-    image: "/projects/project_5.png",
+    image: "/projects/Forecaster.png",
     gitLink: "https://github.com/AIsTushar/forecaster-single-page-nextjs",
     liveLink: "https://forecaster-single-page-nextjs.vercel.app",
     tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
   },
   {
     title: "React Real Estate Website",
-    image: "/projects/project_6.png",
+    image: "/projects/React_Real.png",
     gitLink: "https://github.com/AIsTushar/React-Real-Estate-Website",
     liveLink: "https://real-estate-website-cfb.pages.dev",
     tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
