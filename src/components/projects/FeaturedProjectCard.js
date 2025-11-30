@@ -15,7 +15,7 @@ function FeaturedProjectCard({ project }) {
           className="h-full w-full object-cover"
         />
 
-        <div className="bg-secondary absolute inset-0 opacity-50 transition-all duration-300 group-hover:opacity-0"></div>
+        <div className="bg-secondary absolute inset-0 opacity-30 transition-all duration-300 group-hover:opacity-0"></div>
       </div>
 
       {/* Details */}

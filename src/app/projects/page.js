@@ -27,6 +27,16 @@ const feturedProjects = [
   },
 
   {
+    title: "mimic",
+    description:
+      "A multi-purpose web application built with Next.js to showcase diverse features and functionalities, including e-commerce, media galleries, Harry Potter content, and more..",
+    image: "/projects/mimic.jpg",
+    gitLink: "https://github.com/AIsTushar/mimic",
+    liveLink: "https://mimic-drab.vercel.app",
+    tags: ["JavaScript", "React", "Next.js", "Tailwind CSS", "VS Code"],
+  },
+
+  {
     title: "Hotel Management System",
     description:
       "A modern and fully functional hotel management admin dashboard built with React.js and Supabase. Designed for employees to manage operations efficiently.",
