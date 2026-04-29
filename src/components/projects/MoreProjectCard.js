@@ -10,6 +10,7 @@ function MoreProjectCard({ project }) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRef = useRef(null);
+  const projectHref = `/projects/${project.slug}`;
 
   const handleMouseMove = (e) => {
     if (cardRef.current) {
@@ -27,7 +28,7 @@ function MoreProjectCard({ project }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
-      className="relative flex w-2/4 items-center justify-between border-b-[1px] border-gray-700 py-4 text-gray-300"
+      className="relative flex w-full items-center justify-between border-b-[1px] border-gray-700 py-4 text-gray-300 xl:w-2/4"
     >
       {/* Animated Image */}
       <motion.div
@@ -52,11 +53,17 @@ function MoreProjectCard({ project }) {
           className="h-72 w-96 rounded-md object-contain"
         />
       </motion.div>
-      <div className="flex flex-col gap-3">
+      <div className="flex min-w-0 flex-col gap-3">
         <div className="flex items-center gap-2 text-xl font-bold text-white">
-          <Folder className="text-secondary h-8 w-8" /> <p>{project.title}</p>
+          <Folder className="text-secondary h-8 w-8 shrink-0" />
+          <Link
+            href={projectHref}
+            className="truncate transition-colors duration-300 hover:text-cyan-200"
+          >
+            {project.title}
+          </Link>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {project.tags.map((tag, i) => (
             <span key={i}>{tag}</span>
           ))}
@@ -64,13 +71,21 @@ function MoreProjectCard({ project }) {
       </div>
 
       <div className="flex gap-2 text-white">
-        <Link href={"/"}>
-          <Github className="hover:text-secondary h-5 w-5" />
-        </Link>
+        {project.gitLink ? (
+          <Link href={project.gitLink} target="_blank" rel="noreferrer">
+            <Github className="hover:text-secondary h-5 w-5" />
+          </Link>
+        ) : null}
 
-        <Link href={"/"}>
-          <ExternalLink className="hover:text-secondary h-5 w-5" />
-        </Link>
+        {project.liveLink ? (
+          <Link
+            href={project.liveLink}
+            target={project.liveLink.startsWith("http") ? "_blank" : undefined}
+            rel={project.liveLink.startsWith("http") ? "noreferrer" : undefined}
+          >
+            <ExternalLink className="hover:text-secondary h-5 w-5" />
+          </Link>
+        ) : null}
       </div>
     </div>
   );
