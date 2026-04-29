@@ -1,6 +1,6 @@
 "use client";
 
-import { Code, CodeXml, StarIcon } from "lucide-react";
+import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import CardHeader from "./CardHeader";
 import ToolboxItemComponent from "./ToolboxItemComponent";
@@ -15,6 +15,10 @@ const toolboxItems = [
   {
     title: "React",
     icon: "/icons/react.png",
+  },
+  {
+    title: "TypeScript",
+    icon: "/icons/typescript.png",
   },
   {
     title: "HTML5",
@@ -35,6 +39,30 @@ const toolboxItems = [
   {
     title: "Next.js",
     icon: "/icons/nextjs.png",
+  },
+  {
+    title: "Express.js",
+    icon: "/icons/express.png",
+  },
+  {
+    title: "Prisma",
+    icon: "/icons/prisma.png",
+  },
+  {
+    title: "MongoDB",
+    icon: "/icons/mongodb.png",
+  },
+  {
+    title: "PostgreSQL",
+    icon: "/icons/postgresql.png",
+  },
+  {
+    title: "Nginx",
+    icon: "/icons/nginx.png",
+  },
+  {
+    title: "Postman",
+    icon: "/icons/postman.png",
   },
 ];
 
