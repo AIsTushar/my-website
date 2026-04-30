@@ -75,7 +75,7 @@ function ArticleTableOfContents({ sections }) {
   };
 
   return (
-    <aside className="hidden xl:block xl:h-full xl:overflow-y-auto xl:pr-2">
+    <aside className="hidden xl:block xl:h-full xl:overflow-y-auto xl:pr-2 xl:overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
       <div className="border-r border-white/10 pr-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
           On this page

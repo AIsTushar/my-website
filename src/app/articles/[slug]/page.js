@@ -58,7 +58,7 @@ async function ArticleDetailPage({ params }) {
 
           <div
             id="article-scroll-container"
-            className="min-w-0 space-y-10 xl:min-h-0 xl:overflow-y-auto xl:scroll-smooth xl:pr-4 xl:overscroll-contain"
+            className="min-w-0 space-y-10 xl:min-h-0 xl:overflow-y-auto xl:scroll-smooth xl:pr-4 xl:overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
             <ArticleHero article={article} />
             <ArticleContent sections={article.sections} />

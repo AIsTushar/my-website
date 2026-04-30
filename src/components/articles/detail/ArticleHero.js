@@ -21,18 +21,6 @@ function ArticleHero({ article }) {
       </div>
 
       <div className="flex flex-wrap items-center gap-4 text-base text-slate-300">
-        <div className="flex items-center gap-3">
-          <Image
-            src={article.author.avatar}
-            alt={article.author.name}
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-full border border-white/10 object-cover"
-          />
-          <span>{article.author.name}</span>
-        </div>
-
-        <span className="hidden text-slate-500 sm:inline">.</span>
         <span>{article.publishDateLabel}</span>
         <span className="hidden text-slate-500 sm:inline">.</span>
 
