@@ -1,26 +1,35 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-function FeaturedArcicalCard({ data, index, setActiveCard }) {
+function FeaturedArcicalCard({ article, index, setActiveCard }) {
   return (
     <motion.div
       onMouseEnter={() => setActiveCard(index)}
       onMouseLeave={() => setActiveCard(null)}
       className="flex w-1/2 flex-col gap-4 overflow-hidden rounded-2xl px-4 py-4"
     >
-      <div className="rounded-2xl">
+      <Link
+        href={`/articles/${article.slug}`}
+        className="rounded-2xl transition-transform duration-300 hover:scale-[1.01]"
+      >
         <Image
-          src={data.img}
-          alt={`${data.title} Image`}
-          width={500}
-          height={500}
+          src={article.image}
+          alt={`${article.title} Image`}
+          width={900}
+          height={700}
           className="h-full w-full rounded-2xl object-cover"
         />
-      </div>
-      <h2 className="text-xl text-white">{data.title}</h2>
-      <p className="text-gray-500">{data.desc}</p>
-      <span className="text-white">{data.readTime}</span>
+      </Link>
+      <Link
+        href={`/articles/${article.slug}`}
+        className="text-xl text-white transition-colors duration-300 hover:text-cyan-200"
+      >
+        {article.title}
+      </Link>
+      <p className="text-gray-500">{article.description}</p>
+      <span className="text-white">{article.readTime}</span>
     </motion.div>
   );
 }

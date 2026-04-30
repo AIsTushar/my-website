@@ -104,6 +104,7 @@ export const projects = [
       "/projects/dmc-2.png",
       "/projects/dmc-3.png",
       "/projects/dmc-4.png",
+      "/projects/dmc-5.png",
     ]),
   },
   {
@@ -147,10 +148,12 @@ export const projects = [
         icon: "rocket",
       },
     ],
-    gallery: createPlaceholderGallery(
+    gallery: createGallery("Trade Go Limited", [
       "/projects/trade-go-limited.png",
-      "Trade Go Limited",
-    ),
+      "/projects/trade-go-limited-2.png",
+      "/projects/trade-go-limited-3.png",
+      "/projects/trade-go-limited-4.png",
+    ]),
   },
   {
     slug: "mimic",
@@ -193,7 +196,13 @@ export const projects = [
         icon: "palette",
       },
     ],
-    gallery: createPlaceholderGallery("/projects/mimic.jpg", "mimic"),
+    gallery: createGallery("Trade Go Limited", [
+      "/projects/mimic.jpg",
+      "/projects/mimic-2.png",
+      "/projects/mimic-3.png",
+      "/projects/mimic-4.png",
+      "/projects/mimic-5.png",
+    ]),
   },
   {
     slug: "hotel-management-system",
