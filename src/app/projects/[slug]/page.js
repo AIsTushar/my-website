@@ -19,8 +19,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }) {
-  const project = getProjectBySlug(params?.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     return {
@@ -34,8 +35,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-function ProjectDetailPage({ params }) {
-  const project = getProjectBySlug(params?.slug);
+async function ProjectDetailPage({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();

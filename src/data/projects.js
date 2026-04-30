@@ -1,15 +1,15 @@
 export const projectTechIcons = {
   JavaScript: "/icons/js.png",
   React: "/icons/react.png",
-  "TypeScript": "/icons/typescript.png",
-  "HTML5": "/icons/html-5.png",
-  "CSS3": "/icons/css-3.png",
+  TypeScript: "/icons/typescript.png",
+  HTML5: "/icons/html-5.png",
+  CSS3: "/icons/css-3.png",
   "Tailwind CSS": "/icons/tailwindcss.png",
   "Next.js": "/icons/nextjs.png",
   "Node.js": "/icons/nodejs.png",
   "Express.js": "/icons/express.png",
-  "MongoDB": "/icons/mongodb.png",
-  "PostgreSQL": "/icons/postgresql.png",
+  MongoDB: "/icons/mongodb.png",
+  PostgreSQL: "/icons/postgresql.png",
   Prisma: "/icons/prisma.png",
   Nginx: "/icons/nginx.png",
   Postman: "/icons/postman.png",
@@ -29,38 +29,24 @@ function normalizeSlug(value) {
     .toLowerCase();
 }
 
-const createGallery = (src, title) => [
-  {
-    src,
-    alt: `${title} dashboard overview`,
-    objectPosition: "left top",
-  },
-  {
-    src,
-    alt: `${title} workspace interface`,
-    objectPosition: "right top",
-  },
-  {
-    src,
-    alt: `${title} feature panel`,
-    objectPosition: "left center",
-  },
-  {
-    src,
-    alt: `${title} content detail view`,
-    objectPosition: "right center",
-  },
-  {
-    src,
-    alt: `${title} analytics panel`,
-    objectPosition: "left bottom",
-  },
-  {
-    src,
-    alt: `${title} responsive screen`,
-    objectPosition: "right bottom",
-  },
-];
+const createGallery = (title, images) =>
+  images.map((image, index) =>
+    typeof image === "string"
+      ? {
+          src: image,
+          alt: `${title} screenshot ${index + 1}`,
+        }
+      : {
+          ...image,
+          alt: image.alt ?? `${title} screenshot ${index + 1}`,
+        },
+  );
+
+const createPlaceholderGallery = (src, title, count = 4) =>
+  createGallery(
+    title,
+    Array.from({ length: count }, () => src),
+  );
 
 export const projects = [
   {
@@ -112,7 +98,13 @@ export const projects = [
         icon: "card",
       },
     ],
-    gallery: createGallery("/projects/dmc.png", "DIMCPrep"),
+    gallery: createGallery("DIMCPrep", [
+      "/projects/dmc.png",
+      "/projects/dmc-1.png",
+      "/projects/dmc-2.png",
+      "/projects/dmc-3.png",
+      "/projects/dmc-4.png",
+    ]),
   },
   {
     slug: "trade-go-limited",
@@ -155,7 +147,10 @@ export const projects = [
         icon: "rocket",
       },
     ],
-    gallery: createGallery("/projects/trade-go-limited.png", "Trade Go Limited"),
+    gallery: createPlaceholderGallery(
+      "/projects/trade-go-limited.png",
+      "Trade Go Limited",
+    ),
   },
   {
     slug: "mimic",
@@ -198,7 +193,7 @@ export const projects = [
         icon: "palette",
       },
     ],
-    gallery: createGallery("/projects/mimic.jpg", "mimic"),
+    gallery: createPlaceholderGallery("/projects/mimic.jpg", "mimic"),
   },
   {
     slug: "hotel-management-system",
@@ -248,7 +243,10 @@ export const projects = [
         icon: "briefcase",
       },
     ],
-    gallery: createGallery("/projects/project_2.png", "Hotel Management System"),
+    gallery: createPlaceholderGallery(
+      "/projects/project_2.png",
+      "Hotel Management System",
+    ),
   },
   {
     slug: "the-wild-oasis-website",
@@ -291,7 +289,10 @@ export const projects = [
         icon: "smartphone",
       },
     ],
-    gallery: createGallery("/projects/project_3.png", "The Wild Oasis Website"),
+    gallery: createPlaceholderGallery(
+      "/projects/project_3.png",
+      "The Wild Oasis Website",
+    ),
   },
   {
     slug: "tour-management-api",
@@ -334,7 +335,10 @@ export const projects = [
         icon: "shield",
       },
     ],
-    gallery: createGallery("/projects/project_7.png", "Tour Management API"),
+    gallery: createPlaceholderGallery(
+      "/projects/project_7.png",
+      "Tour Management API",
+    ),
   },
   {
     slug: "recipedia",
@@ -377,7 +381,7 @@ export const projects = [
         icon: "grid",
       },
     ],
-    gallery: createGallery("/projects/project_4.png", "Recipedia"),
+    gallery: createPlaceholderGallery("/projects/project_4.png", "Recipedia"),
   },
   {
     slug: "forecaster-single-page",
@@ -420,7 +424,7 @@ export const projects = [
         icon: "palette",
       },
     ],
-    gallery: createGallery("/projects/Forecaster.png", "Forecaster"),
+    gallery: createPlaceholderGallery("/projects/Forecaster.png", "Forecaster"),
   },
   {
     slug: "react-real-estate-website",
@@ -463,7 +467,10 @@ export const projects = [
         icon: "shield",
       },
     ],
-    gallery: createGallery("/projects/React_Real.png", "React Real Estate Website"),
+    gallery: createPlaceholderGallery(
+      "/projects/React_Real.png",
+      "React Real Estate Website",
+    ),
   },
   {
     slug: "portfolio-website",
@@ -506,7 +513,10 @@ export const projects = [
         icon: "palette",
       },
     ],
-    gallery: createGallery("/projects/project_8.png", "Portfolio Website"),
+    gallery: createPlaceholderGallery(
+      "/projects/project_8.png",
+      "Portfolio Website",
+    ),
   },
 ];
 

@@ -14,15 +14,19 @@ function ProjectTechStack({ tags }) {
           return (
             <li key={tag} className="flex items-center gap-4 text-slate-200">
               {icon ? (
-                <Image
-                  src={icon}
-                  alt={tag}
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 rounded-lg"
-                />
+                <div className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/8 bg-white/[0.03] p-1.5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)]">
+                  <Image
+                    src={icon}
+                    alt={tag}
+                    fill
+                    sizes="44px"
+                    className="object-contain p-0.5 saturate-[0.92]"
+                  />
+                </div>
               ) : (
-                <CircleDashed className="text-secondary h-8 w-8" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/8 bg-white/[0.03]">
+                  <CircleDashed className="text-secondary h-6 w-6" />
+                </div>
               )}
 
               <span className="text-lg">{tag}</span>
