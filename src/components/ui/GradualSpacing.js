@@ -2,13 +2,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-function GradualSpacing({ text, className }) {
+function GradualSpacing({ text, className = "" }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
     <p
-      className={`text-lg text-gray-400 ${className} max-w-full break-words`}
+      className={`max-w-full break-words text-sm leading-6 text-gray-400 sm:text-base sm:leading-7 lg:text-lg lg:leading-8 ${className}`}
       ref={ref}
     >
       {text.split(" ").map((word, index) => (

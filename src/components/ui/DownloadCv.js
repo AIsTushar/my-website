@@ -15,7 +15,7 @@ function DownloadCv() {
       href="https://drive.google.com/file/d/1k5SNZiSzfLbkUlf5YVIKilBw0xaZ30e8/view?usp=sharing"
       target="_blank"
       download={true}
-      className="border-secondary text-secondary test-sm mt-8 flex w-fit items-center rounded-md border-[.1px] border-solid px-6 py-4 font-semibold"
+      className="border-secondary text-secondary mt-5 flex w-fit max-w-full items-center rounded-md border-[.1px] border-solid px-5 py-3 text-sm font-semibold sm:mt-6 sm:px-6 sm:py-4 lg:mt-8"
     >
       Download My Resume <Download className="ml-2 h-4 w-4" />
     </MotionLink>

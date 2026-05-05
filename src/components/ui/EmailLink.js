@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function EmailLink() {
   const MotionLink = motion.create(Link);
   return (
-    <div className="absolute right-12 bottom-0 flex flex-col items-center gap-7 text-gray-400">
+    <div className="absolute right-8 bottom-0 hidden flex-col items-center gap-7 text-gray-400 md:flex lg:right-12">
       <MotionLink
         whileHover={{ y: -5, color: "#64ffda" }}
         href="mailto:azizultushar98@gmail.com"
