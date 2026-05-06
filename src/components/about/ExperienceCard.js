@@ -10,6 +10,19 @@ function ExperienceCard() {
   const companies = [
     {
       id: "01",
+      name: "SM Technology",
+      url: "#",
+      role: "Jr. Backend Developer",
+      period: "April 2025 — Present",
+      description: [
+        "Working on backend systems using Node.js, TypeScript, Express, and Prisma.",
+        "Built secure authentication features including JWT, role-based access, OTP verification, and password reset flows.",
+        "Integrated payment features with Stripe and Paystack, including subscription and webhook handling.",
+        "Helped maintain production deployments on VPS using Nginx and PM2.",
+      ],
+    },
+    {
+      id: "02",
       name: "Trade Go Limited",
       url: "https://tradegolimited.co.uk/",
       role: "Freelance Developer",
@@ -22,7 +35,7 @@ function ExperienceCard() {
       ],
     },
     {
-      id: "02",
+      id: "03",
       name: "Itransition Group",
       url: "https://www.itransition.com",
       role: "Software Engineer Intern",

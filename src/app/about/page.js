@@ -9,35 +9,30 @@ function page() {
     <div className="mt-46 w-full">
       <div className="m-auto flex w-3/5 flex-col gap-12">
         <h1 className="text-5xl leading-[120%] text-white">
-          Full Stack Developer passionate about crafting meaningful user
-          experiences and building impact-driven digital products.
+          Full Stack Developer focused on building scalable products and smooth
+          user experiences.
         </h1>
 
         <p className="text-2xl leading-[120%] text-gray-300">
-          Hey, I&apos;m Azizul Islam Tushar — a dedicated Full Stack Developer
-          with a background in Computer Science and a strong passion for
-          building intuitive, user-focused applications. With hands-on
-          experience in technologies like React.js, Next.js, Node.js,
-          PostgreSQL, and MongoDB, I specialize in developing full-stack
-          solutions that not only function smoothly but also resonate with real
-          user needs.
+          Hey, I&apos;m Azizul Islam Tushar — a Full Stack Developer with a
+          Computer Science background and hands-on experience building modern
+          web applications. I mainly work with Node.js, TypeScript, React,
+          Next.js, PostgreSQL, and MongoDB to create fast, reliable, and
+          user-friendly products.
         </p>
 
         <p className="text-2xl leading-[120%] text-gray-300">
-          I thrive at the intersection of code and creativity—whether it&apos;s
-          designing community-driven platforms, working with RESTful APIs,
-          integrating third-party services like or ensuring clean, maintainable
-          code. I&apos;ve built and contributed to projects ranging from
-          e-commerce to social impact platforms, always with a focus on
-          usability, accessibility, and scalability.
+          Currently, I&apos;m working as a Jr. Backend Developer at SM
+          Technology, where I build backend systems, authentication flows,
+          payment integrations, and real-time features. I enjoy solving
+          real-world problems and turning ideas into scalable applications that
+          people actually enjoy using.
         </p>
 
         <p className="text-2xl leading-[120%] text-gray-300">
-          Beyond the code, I believe in learning by doing, continuously growing
-          through real-world projects, and collaborating across teams to create
-          solutions that matter. Whether it&apos;s shipping a new feature,
-          debugging an issue, or just brainstorming better UX flows—I&apos;m
-          always all in. Let&apos;s build something meaningful.
+          Outside of work, I love exploring new technologies, improving my
+          backend architecture skills, and building personal projects that
+          challenge me to grow as a developer.
         </p>
       </div>
 
