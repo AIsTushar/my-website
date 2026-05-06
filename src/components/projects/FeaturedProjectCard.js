@@ -6,11 +6,11 @@ function FeaturedProjectCard({ project }) {
   const projectHref = `/projects/${project.slug}`;
 
   return (
-    <div className="flex flex-col gap-8 xl:flex-row">
+    <div className="flex w-full flex-col gap-5 sm:gap-6 xl:flex-row xl:gap-8">
       {/* Image */}
       <Link
         href={projectHref}
-        className="group relative h-96 w-full overflow-hidden rounded-md xl:w-[548px]"
+        className="group relative aspect-[16/9] w-full overflow-hidden rounded-md xl:h-96 xl:w-[548px]"
       >
         <Image
           src={project.image}
@@ -24,20 +24,22 @@ function FeaturedProjectCard({ project }) {
       </Link>
 
       {/* Details */}
-      <div className="z-10 flex flex-col items-end justify-center gap-6 text-right xl:-ml-20">
+      <div className="z-10 flex flex-col items-start justify-center gap-3 text-left sm:gap-4 xl:-ml-20 xl:items-end xl:gap-6 xl:text-right">
         <div>
-          <p className="text-secondary">Featured Project</p>
+          <p className="text-secondary text-xs sm:text-sm md:text-base">
+            Featured Project
+          </p>
           <Link
             href={projectHref}
-            className="text-2xl text-white transition-colors duration-300 hover:text-cyan-200"
+            className="text-base font-semibold text-white transition-colors duration-300 hover:text-cyan-200 sm:text-xl md:text-2xl"
           >
             {project.title}
           </Link>
         </div>
-        <div className="w-full rounded-sm bg-[#112240] py-6 pr-8 pl-12 text-right text-gray-300 xl:w-[548px]">
+        <div className="w-full rounded-sm bg-[#112240] px-4 py-4 text-left text-xs leading-6 text-gray-300 sm:px-6 sm:text-sm md:text-base xl:w-[548px] xl:py-6 xl:pr-8 xl:pl-12 xl:text-right">
           {project.description}
         </div>
-        <div className="flex flex-wrap justify-end gap-4 text-sm text-gray-400">
+        <div className="flex flex-wrap gap-2 text-xs text-gray-400 sm:gap-3 sm:text-sm xl:justify-end xl:gap-4">
           {project.tags.map((tag, i) => (
             <span key={i}>{tag}</span>
           ))}

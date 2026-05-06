@@ -21,7 +21,7 @@ const SingleLink = ({ href, text, icon: Icon }) => {
 function Footer() {
   const MotionLink = motion.create(Link);
   return (
-    <div className="mt-36 flex w-full items-center justify-center gap-10 py-12 text-white">
+    <div className="mt-20 flex w-full flex-wrap items-center justify-center gap-6 px-4 py-10 text-sm text-white sm:mt-28 sm:gap-8 sm:text-base lg:mt-36 lg:gap-10 lg:py-12">
       <SingleLink
         href="https://github.com/AIsTushar?tab=repositories"
         text="GitHub"

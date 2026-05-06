@@ -28,7 +28,7 @@ function MoreProjectCard({ project }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
-      className="relative flex w-full items-center justify-between border-b-[1px] border-gray-700 py-4 text-gray-300 xl:w-2/4"
+      className="relative flex w-full items-start justify-between gap-4 border-b-[1px] border-gray-700 py-4 text-gray-300 lg:items-center"
     >
       {/* Animated Image */}
       <motion.div
@@ -50,12 +50,12 @@ function MoreProjectCard({ project }) {
           width={500}
           height={500}
           alt="project Image"
-          className="h-72 w-96 rounded-md object-contain"
+          className="h-56 w-72 rounded-md object-contain sm:h-64 sm:w-80 lg:h-72 lg:w-96"
         />
       </motion.div>
-      <div className="flex min-w-0 flex-col gap-3">
-        <div className="flex items-center gap-2 text-xl font-bold text-white">
-          <Folder className="text-secondary h-8 w-8 shrink-0" />
+      <div className="flex min-w-0 flex-col gap-2 sm:gap-3">
+        <div className="flex min-w-0 items-center gap-2 text-base font-bold text-white sm:text-lg lg:text-xl">
+          <Folder className="text-secondary h-6 w-6 shrink-0 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
           <Link
             href={projectHref}
             className="truncate transition-colors duration-300 hover:text-cyan-200"
@@ -63,14 +63,14 @@ function MoreProjectCard({ project }) {
             {project.title}
           </Link>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
           {project.tags.map((tag, i) => (
             <span key={i}>{tag}</span>
           ))}
         </div>
       </div>
 
-      <div className="flex gap-2 text-white">
+      <div className="flex shrink-0 gap-2 text-white">
         {project.gitLink ? (
           <Link href={project.gitLink} target="_blank" rel="noreferrer">
             <Github className="hover:text-secondary h-5 w-5" />
