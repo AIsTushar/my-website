@@ -67,8 +67,7 @@ export const articles = [
             title: "2. What are props?",
             answer:
               "Props are read-only inputs passed from a parent component to a child component. They let components stay reusable and configurable.",
-            code:
-              "function Welcome(props) {\n  return <h1>Hello, {props.name}</h1>;\n}",
+            code: "function Welcome(props) {\n  return <h1>Hello, {props.name}</h1>;\n}",
           },
           {
             id: "what-is-state",
@@ -82,56 +81,49 @@ export const articles = [
             title: "4. What is a component?",
             answer:
               "A component is a reusable building block of a React app. Components can return JSX and manage logic, state, and props.",
-            code:
-              "function Button() {\n  return <button>Click me</button>;\n}",
+            code: "function Button() {\n  return <button>Click me</button>;\n}",
           },
           {
             id: "what-is-virtual-dom",
             title: "5. What is the virtual DOM?",
             answer:
               "The virtual DOM is a lightweight in-memory representation of the real DOM. React compares updates there first and changes only what is necessary in the browser.",
-            code:
-              "// React updates the virtual DOM first\nsetItems((current) => [...current, newItem]);",
+            code: "// React updates the virtual DOM first\nsetItems((current) => [...current, newItem]);",
           },
           {
             id: "what-is-usestate",
             title: "6. What is useState?",
             answer:
               "useState is a React Hook that lets function components store and update local state.",
-            code:
-              "const [isOpen, setIsOpen] = useState(false);\nsetIsOpen(true);",
+            code: "const [isOpen, setIsOpen] = useState(false);\nsetIsOpen(true);",
           },
           {
             id: "what-is-useeffect",
             title: "7. What is useEffect?",
             answer:
               "useEffect is a Hook used for side effects like fetching data, subscribing to events, or syncing values after render.",
-            code:
-              "useEffect(() => {\n  document.title = `Count: ${count}`;\n}, [count]);",
+            code: "useEffect(() => {\n  document.title = `Count: ${count}`;\n}, [count]);",
           },
           {
             id: "what-is-key-in-lists",
             title: "8. What is key in lists?",
             answer:
               "A key helps React identify which list items changed, were added, or were removed. Stable keys improve rendering correctness and performance.",
-            code:
-              "items.map((item) => <li key={item.id}>{item.name}</li>);",
+            code: "items.map((item) => <li key={item.id}>{item.name}</li>);",
           },
           {
             id: "what-is-conditional-rendering",
             title: "9. What is conditional rendering?",
             answer:
               "Conditional rendering means showing different UI based on state or props using normal JavaScript conditions.",
-            code:
-              "{isLoggedIn ? <Dashboard /> : <SignInPrompt />}",
+            code: "{isLoggedIn ? <Dashboard /> : <SignInPrompt />}",
           },
           {
             id: "what-is-react-router",
             title: "10. What is React Router?",
             answer:
               "React Router is a routing library for React applications. It helps map URLs to components for navigation in single-page apps.",
-            code:
-              "<Route path=\"/about\" element={<AboutPage />} />",
+            code: '<Route path="/about" element={<AboutPage />} />',
           },
         ],
       },

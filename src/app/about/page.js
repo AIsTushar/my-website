@@ -259,10 +259,15 @@ function Page() {
         <h2 className="text-center text-5xl text-white">Education</h2>
         <EducationCard />
       </div>
-      <div className="mx-auto mt-16 flex w-3/5 flex-col">
-        <h2 className="mb-20 text-center text-5xl text-white">My Skills</h2>
-        <Skills />
-      </div>
+
+      <section className="px-6 pt-10 pb-4 sm:px-10 lg:px-16">
+        <div className="mx-auto flex w-full max-w-6xl flex-col">
+          <h2 className="mb-10 text-center text-3xl font-bold text-white sm:mb-14 sm:text-4xl lg:mb-20 lg:text-5xl">
+            My Skills
+          </h2>
+          <Skills />
+        </div>
+      </section>
 
       <Footer />
     </div>

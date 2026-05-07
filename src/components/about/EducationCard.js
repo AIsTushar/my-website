@@ -112,7 +112,7 @@ function EducationCard() {
   return (
     <div className="relative py-20">
       <div className="relative z-10 container mx-auto max-w-5xl px-4">
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 md:grid md:w-full md:grid-cols-[16rem_minmax(0,1fr)] md:justify-normal md:gap-8 lg:grid-cols-[18rem_minmax(0,1fr)]">
           {/* Left sidebar - Company tabs */}
           <div className="relative mb-6 h-fit">
             <span className="absolute top-0 left-0 z-[50] h-full w-0.5 bg-slate-600"></span>
@@ -149,7 +149,7 @@ function EducationCard() {
           </div>
 
           {/* Right content - Company details (fixed position) */}
-          <div className="md:sticky md:top-24 md:w-3/5 md:self-start md:pl-8">
+          <div className="md:sticky md:top-24 md:min-w-0 md:self-start">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCompany}

@@ -115,8 +115,8 @@ const hobbies = [
 function Skills() {
   const ref = useRef(null);
   return (
-    <div className="flex flex-col gap-8">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+    <div className="flex w-full flex-col gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-5">
         {/* Favorite Book Card */}
         <div className="h-[320px] w-full overflow-hidden rounded-md border border-white/20 bg-gray-800 md:col-span-2">
           <CardHeader
@@ -157,20 +157,23 @@ function Skills() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+      <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-5">
         {/* Hobbies */}
-        <div className="col-span-3 flex h-[320px] w-full flex-col overflow-hidden rounded-md border border-white/20 bg-gray-800">
+        <div className="flex min-h-[320px] w-full flex-col overflow-hidden rounded-md border border-white/20 bg-gray-800 md:col-span-3 md:h-[320px]">
           <CardHeader
             icon={StarIcon}
             title="Beyond Code"
             description="Explore my interests and hobbies"
           />
 
-          <div className="relative flex-grow" ref={ref}>
+          <div
+            className="relative flex flex-grow flex-wrap content-start gap-3 px-5 pb-6 md:block md:px-0 md:pb-0"
+            ref={ref}
+          >
             {hobbies.map((item, index) => (
               <motion.div
                 key={index}
-                className="absolute inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
+                className="static inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-4 py-1.5 text-sm md:absolute md:px-6 md:text-base"
                 style={{ left: item.left, top: item.top }}
                 drag
                 dragConstraints={ref}
@@ -184,7 +187,7 @@ function Skills() {
         </div>
 
         {/* Map of city */}
-        <div className="relative col-span-2 h-[320px] w-full overflow-hidden rounded-md border border-white/20 bg-gray-800 px-6 py-8">
+        <div className="relative h-[320px] w-full overflow-hidden rounded-md border border-white/20 bg-gray-800 px-6 py-8 md:col-span-2">
           <Image src="/map.png" alt="map" fill className="object-cover" />
 
           <div className="absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full after:absolute after:inset-0 after:rounded-full after:outline-2 after:-outline-offset-2 after:outline-gray-900/30 after:content-['']">
