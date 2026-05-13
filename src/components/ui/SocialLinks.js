@@ -1,11 +1,5 @@
 "use client";
-import {
-  Code2,
-  Github,
-  Instagram,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { Code2, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -18,6 +12,7 @@ function SocialLinks() {
         href="https://github.com/AIsTushar?tab=repositories"
         target="_blank"
         rel="noreferrer"
+        alt="GitHub"
       >
         <Github className="h-5 w-5" />
       </MotionLink>
@@ -26,6 +21,7 @@ function SocialLinks() {
         href="https://www.linkedin.com/in/azizul-islam-tushar/"
         target="_blank"
         rel="noreferrer"
+        alt="LinkedIn"
       >
         <Linkedin className="h-5 w-5" />
       </MotionLink>
@@ -34,6 +30,7 @@ function SocialLinks() {
         href="https://www.instagram.com/azizul_islam_tushar/"
         target="_blank"
         rel="noreferrer"
+        alt="Instagram"
       >
         <Instagram className="h-5 w-5" />
       </MotionLink>
@@ -42,6 +39,7 @@ function SocialLinks() {
         href="https://X.com"
         target="_blank"
         rel="noreferrer"
+        alt="X (formerly Twitter)"
       >
         <Twitter className="h-5 w-5" />
       </MotionLink>
@@ -50,6 +48,7 @@ function SocialLinks() {
         target="_blank"
         href="https://leetcode.com/u/azizultushar98/"
         rel="noreferrer"
+        alt="LeetCode"
       >
         <Code2 className="h-5 w-5" />
       </MotionLink>
